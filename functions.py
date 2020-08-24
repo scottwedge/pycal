@@ -1,7 +1,7 @@
 import datetime
 import json
 
-import termical_event
+import event
 
 
 def display(start_date: list = None, end_date: list = None,

@@ -1,4 +1,5 @@
 '''This module contains Event class that represents single event in calendar.'''
+
 class Calendar():
     '''Representation of a calendar.'''
 
@@ -6,6 +7,7 @@ class Calendar():
         '''Initialize attributes.'''
         self.name = name
         self.events = []
+        self.count = 0
 
     def __len__(self):
         '''Return a length of self.events.'''
@@ -24,6 +26,19 @@ class Calendar():
             return True
         elif item not in self.events:
             return False
+
+    def __iter__(self):
+        '''Create an iterator.'''
+        return self
+
+    def __next__(self):
+        '''Access one event at a time.'''
+        if self.count == len(self.events):
+            self.count = 0
+            raise StopIteration
+        return_event = self.events,__getitem__(count)
+        self.count += 1
+        return return_event
 
 class Event():
     '''Representation of a single calendar event.'''
