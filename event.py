@@ -109,7 +109,7 @@ class Event():
     def __next__(self) -> list:
         '''Access one attribute at a time.'''
 
-        '''It returns list that cotains name of the attribute and
+        '''It returns list that contains name of the attribute and
         its value.'''
         self.return_list = []
         if self.count == self.index:
